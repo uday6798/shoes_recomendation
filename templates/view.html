@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <form action= "{{url_for('similar_products')}}" method= "POST">     
+            <div>
+                please enter the reference id<br>
+                <input type="text" name="given_img" >
+            </div>
+            <input type="submit" value="submit">
+        
+        <h3> shoes selected<br>
+            <img src ="./static/{{given_img}}" alt="selected image" ><br><br>
+            {{given_img}}<br><br>
+            
+            ----------------------------------------------------------------------------------------<br><br>
+            <div>
+            recommendation 1<br>
+            <img src ="./static/{{closest_imgs[0]}}" alt="Recommend image"><br>
+            {{closest_imgs[0]}}<br>
+            similarity : {{closest_imgs_scores[0]}}<br>
+            recommendation 2<br>
+            <img src ="./static/{{closest_imgs[1]}}" alt="Recommend image" ><br>
+            {{closest_imgs[1]}}<br>
+            similarity : {{closest_imgs_scores[1]}}<br>
+            recommendation 3<br>
+            <img src ="./static/{{closest_imgs[2]}}" alt="Recommend image" ><br>
+            {{closest_imgs[2]}}<br>
+            similarity : {{closest_imgs_scores[2]}}<br>
+            recommendation 4<br>
+            <img src ="./static/{{closest_imgs[3]}}" alt="Recommend image" > <br>
+            {{closest_imgs[3]}}<br>
+            similarity : {{closest_imgs_scores[3]}}<br>
+            recommendation 5<br>
+            <img src ="./static/{{closest_imgs[4]}}" alt="Recommend image" ><br>
+            {{closest_imgs[4]}}<br>
+            similarity : {{closest_imgs_scores[4]}}<br>
+
+            </div> 
+            
+        </h3>
+    </form>
+    </body>
+</html>
